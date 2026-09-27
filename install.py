@@ -381,23 +381,9 @@ def step_8_vscode_flatpak(auto_yes: bool):
 # ============================================================
 
 def step_9_build_repos(auto_yes: bool):
-    log("ШАГ 9: Клонирование и сборка ShotX, WhiteSur, Aseprite", "STEP")
+    log("ШАГ 9: Клонирование и сборка WhiteSur и Aseprite", "STEP")
 
-    # 9a. ShotX
-    if confirm("Клонировать и собрать ShotX?", auto_yes):
-        shotx_dir = REPO_ROOT / "ShotX"
-        if shotx_dir.exists():
-            shutil.rmtree(shotx_dir)
-        run_command(
-            ["git", "clone", "https://github.com/vedesh-padal/ShotX.git"],
-            cwd=REPO_ROOT,
-            auto_yes=auto_yes,
-        )
-        log("ShotX клонирован. Зависимости для сборки уже установлены на шаге 7.", "OK")
-    else:
-        log("Пропущен ShotX.", "WARN")
-
-    # 9b. WhiteSur
+    # 9a. WhiteSur
     if confirm("Клонировать WhiteSur (иконки)?", auto_yes):
         whitesur_dir = REPO_ROOT / "WhiteSur-icon-theme"
         if whitesur_dir.exists():
@@ -411,7 +397,7 @@ def step_9_build_repos(auto_yes: bool):
     else:
         log("Пропущен WhiteSur.", "WARN")
 
-    # 9c. Aseprite
+    # 9b. Aseprite
     if confirm("Клонировать и собрать Aseprite?", auto_yes):
         aseprite_dir = REPO_ROOT / "aseprite"
         if aseprite_dir.exists():
@@ -568,7 +554,7 @@ def main():
         ("6. Подключение ChaoticAUR", step_6_chaotic_aur),
         ("7. Установка пакетов", step_7_install_packages),
         ("8. Установка VS Code (Flatpak)", step_8_vscode_flatpak),
-        ("9. Сборка ShotX, WhiteSur, Aseprite", step_9_build_repos),
+        ("9. Сборка WhiteSur и Aseprite", step_9_build_repos),
         ("10. Ссылки для Aseprite", step_10_aseprite_links),
         ("11. Очистка репозиториев", step_11_cleanup),
         ("12. Перевод времени на RTC", step_12_rtc_time),
