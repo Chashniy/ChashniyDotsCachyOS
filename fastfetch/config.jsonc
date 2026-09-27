@@ -1,0 +1,32 @@
+{
+  "logo": {
+    "type": "file",
+    "source": "/home/chashniy/.config/fastfetch/logo.txt",
+    "padding": {
+      "top": 2
+    }
+  },
+  "modules": [
+    "title",
+    "separator",
+    "os",
+    "host",
+    "kernel",
+    "uptime",
+    "packages",
+    "shell",
+    "display",
+    "de",
+    "wm",
+    "theme",
+    "icons",
+    "terminal",
+    "terminal-font",
+    "cpu",
+    "gpu",
+    "memory",
+    "swap",
+    "disk",
+    "break"
+  ]
+}

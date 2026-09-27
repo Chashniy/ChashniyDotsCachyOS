@@ -1,0 +1,32 @@
+// ────────────── Input Configuration ──────────────
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Input
+
+input {
+    keyboard {
+        xkb {
+            layout "us,ru"
+            options "grp:win_space_toggle"
+            // Если хочешь переопределить раскладку,
+            // раскомментируй строку ниже и поменяй по вкусу.
+            //layout "us"
+        }
+        numlock
+    }
+
+    touchpad {
+        tap
+        natural-scroll
+    }
+
+    mouse {
+        // Если хочешь отключить ускорение мыши —
+        // раскомментируй строки ниже.
+        //accel-profile "flat"
+        //accel-speed 0.0
+    }
+
+    // Отключаем переключение фокуса по наведению мыши (как в старом конфиге v4).
+    // focus-follows-mouse
+
+    workspace-auto-back-and-forth
+}
