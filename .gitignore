@@ -1,0 +1,13 @@
+# Игнорируем клонированные репозитории
+zapret-discord-youtube/
+tg-ws-proxy-bin/
+ShotX/
+WhiteSur-icon-theme/
+aseprite/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
